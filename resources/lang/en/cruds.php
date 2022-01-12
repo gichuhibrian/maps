@@ -66,8 +66,8 @@ return [
         ],
     ],
     'category'       => [
-        'title'          => 'Categories',
-        'title_singular' => 'Category',
+        'title'          => 'Offences',
+        'title_singular' => 'Offence',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
@@ -82,8 +82,8 @@ return [
         ],
     ],
     'shop'           => [
-        'title'          => 'Shops',
-        'title_singular' => 'Shop',
+        'title'          => 'Crimes',
+        'title_singular' => 'Crime',
         'fields'         => [
             'id'                   => 'ID',
             'id_helper'            => '',
