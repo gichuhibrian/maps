@@ -7,7 +7,7 @@
             <div class="content-box content-single">
                 <article class="post-8 page type-page status-publish hentry">
                     <header>
-                        <h1 class="entry-title">{{ request()->filled('search') || request()->filled('category') ? 'Search results' : 'All Shops' }}</h1></header>
+                        <h1 class="entry-title">{{ request()->filled('search') || request()->filled('category') ? 'Search results' : 'All Crimes' }}</h1></header>
                     <div class="entry-content entry-summary">
                         <div class="geodir-search-container geodir-advance-search-default" data-show-adv="default">
                             <form class="geodir-listing-search gd-search-bar-style" name="geodir-listing-search" action="{{ route('home') }}" method="get">
@@ -16,7 +16,7 @@
                                         <div class="geodir-search">
                                             <div class='gd-search-input-wrapper gd-search-field-cpt gd-search-field-taxonomy gd-search-field-categories'>
                                                 <select name="category" class="cat_select">
-                                                    <option value="">Category</option>
+                                                    <option value="">Offences</option>
                                                     @foreach($categories as $category)
                                                         <option value="{{ $category->id }}"{{ old('category', request()->input('category')) == $category->id ? ' selected' : '' }}>{{ $category->name }}</option>
                                                     @endforeach
@@ -87,7 +87,7 @@
 @endsection
 
 @section('scripts')
-<script type='text/javascript' src='https://maps.google.com/maps/api/js?language=en&key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&region=GB'></script>
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?language=en&key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&region=Nairobi'></script>
 <script defer>
 	function initialize() {
 		var mapOptions = {

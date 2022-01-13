@@ -18,9 +18,11 @@ class ShopsApiController extends Controller
 
     public function index()
     {
-        abort_if(Gate::denies('shop_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('shop_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new ShopResource(Shop::with(['categories', 'created_by'])->get());
+        // $crime = Shop::all();
+        // return response()->json(['data' => $crime], 200);
     }
 
     public function store(StoreShopRequest $request)

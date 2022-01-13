@@ -47,7 +47,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.shop.fields.description_helper') }}</span>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="photos">{{ trans('cruds.shop.fields.photos') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('photos') ? 'is-invalid' : '' }}" id="photos-dropzone">
                 </div>
@@ -57,7 +57,7 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.shop.fields.photos_helper') }}</span>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="address">{{ trans('cruds.shop.fields.address') }}</label>
                 <input class="form-control map-input {{ $errors->has('address') ? 'is-invalid' : '' }}" type="text" name="address" id="address" value="{{ old('address') }}">
@@ -85,7 +85,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.shop.fields.active_helper') }}</span>
             </div>
-            <label>{{ trans('cruds.shop.fields.working_hours') }}</label>
+            <!-- <label>{{ trans('cruds.shop.fields.working_hours') }}</label>
             @foreach($days as $day)
                 <div class="form-inline">
                     <label class="my-1 mr-2">{{ ucfirst($day->name) }}: from</label>
@@ -121,7 +121,7 @@
                         <option value="30" {{ old('to_minutes.'.$day->id) == '30' ? 'selected' : '' }}>30</option>
                     </select>
                 </div>
-            @endforeach
+            @endforeach -->
 
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
